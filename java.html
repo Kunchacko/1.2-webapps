@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Concepts Example</title>
+</head>
+<body>
+
+<script>
+  function demonstrateStringMethods() {
+    const str = 'Greetings, Kunchacko!';
+    document.write('String Length: ' + str.length + '<br>');
+    document.write('Uppercase: ' + str.toUpperCase() + '<br>');
+    document.write('Lowercase: ' + str.toLowerCase() + '<br>');
+    document.write('Substring: ' + str.substring(0, 5) + '<br>');
+    document.write('Character at index 7: ' + str.charAt(7) + '<br>');
+  }
+
+  function demonstrateNumberMethods() {
+    const num = 42.75;
+    document.write('Fixed to 2 decimals: ' + num.toFixed(2) + '<br>');
+    document.write('Exponential notation: ' + num.toExponential(2) + '<br>');
+    document.write('Rounded: ' + Math.round(num) + '<br>');
+    document.write('Square root: ' + Math.sqrt(num) + '<br>');
+    document.write('Absolute value: ' + Math.abs(-num) + '<br>');
+  }
+
+  function demonstrateArrayMethods() {
+    const countries = ['France', 'India', 'Australia'];
+    document.write('Join: ' + countries.join(', ') + '<br>');
+    document.write('Push: ' + countries.push('France') + ' ' + countries + '<br>');
+    document.write('Pop: ' + countries.pop() + ' ' + countries + '<br>');
+    document.write('Index of "France": ' + countries.indexOf('France') + '<br>');
+    document.write('Reverse: ' + countries.reverse() + '<br>');
+  }
+
+  function demonstrateDateMethods() {
+    const now = new Date();
+    document.write('Current Date: ' + now + '<br>');
+    document.write('Year: ' + now.getFullYear() + '<br>');
+    document.write('Month: ' + now.getMonth() + '<br>');
+    document.write('Day: ' + now.getDate() + '<br>');
+    document.write('Hours: ' + now.getHours() + '<br>');
+  }
+
+  function greet(name) {
+    document.write('Greetings, ' + name + '<br>');
+  }
+
+  function demonstrateFunctionMethods() {
+    const greetWithMessage = greet.bind(null, 'Kunchacko');
+    greetWithMessage();
+
+    function add(a, b) {
+      return a + b;
+    }
+    const addFive = add.bind(null, 5);
+    document.write('5 + 7: ' + addFive(7) + '<br>');
+  }
+
+  demonstrateStringMethods();
+  demonstrateNumberMethods();
+  demonstrateArrayMethods();
+  demonstrateDateMethods();
+  demonstrateFunctionMethods();
+</script>
+
+</body>
+</html>
